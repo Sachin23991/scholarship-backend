@@ -138,7 +138,7 @@ app.post('/api/search-scholarships', async (req, res) => {
     const perplexityResponse = await axios.post(
       'https://api.perplexity.ai/chat/completions',
       {
-        model: 'sonar-small-online',
+        model: 'llama-3.1-sonar-small-128k-online',
         messages: [
           {
             role: 'system',
@@ -543,3 +543,4 @@ process.on('SIGTERM', () => {
     console.log('Process terminated');
   });
 });
+
